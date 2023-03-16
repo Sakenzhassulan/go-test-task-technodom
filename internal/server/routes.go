@@ -36,5 +36,5 @@ func (client *Client) DeleteRedirect(ctx *gin.Context) {
 }
 
 func (client *Client) Redirect(ctx *gin.Context) {
-	user.Redirect(ctx, client.DB)
+	user.Redirect(ctx, client.DB, client.Cache)
 }
